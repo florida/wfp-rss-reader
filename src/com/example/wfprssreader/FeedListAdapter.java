@@ -45,6 +45,9 @@ public class FeedListAdapter extends BaseAdapter {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		
+		holder.headlineTitle.setText(list_data.get(position).getHeadlineTitle());
+		holder.headlineDate.setText(list_data.get(position).getHeadlineDate());
+		
 		return convertView;
 	}
 	

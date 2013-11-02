@@ -28,10 +28,16 @@ public class ArticleFragment extends Fragment {
 		super.onStart();
 		Bundle args = getArguments();
 		if (args != null) {
-			
+			updateArticleView(args.getInt(ARG_POSITION));
 		} else if (current_position != -1){
-			
+			updateArticleView(current_position);
 		}
+	}
+	
+	@Override
+	public void onSaveInstanceState(Bundle outState) { 
+		super.onSaveInstanceState(outState);
+		outState.putInt(ARG_POSITION, current_position);
 	}
 	
 	public void updateArticleView(int position){

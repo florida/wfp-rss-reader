@@ -34,7 +34,13 @@ public class Feed {
 	}
 	
 	public void refreshFeed() {
-		
+		feed_headlines.clear();
+		articles.clear();
+		dates.clear();
+		links.clear();
+		headline_items.clear();
+		feeder = new RSSFeeder();
+		feeder.execute();
 	}
 	
 	public String getName() {

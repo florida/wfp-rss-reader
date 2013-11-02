@@ -22,7 +22,6 @@ public class FeedFragment extends Fragment{
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.feed_headlines_view,container, false);
 		final ListView listview = (ListView) view.findViewById(R.id.feed_headlines_list);
 		
@@ -40,7 +39,7 @@ public class FeedFragment extends Fragment{
 			
 		});
 		
-		return super.onCreateView(inflater, container, savedInstanceState);
+		return view;
 	}
 
 	@Override
