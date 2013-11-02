@@ -12,9 +12,14 @@
         -->
     </style>
 
-    <!-- Application theme. -->
+    <!-- Application theme. -->    
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:spinnerDropDownItemStyle">@style/WhiteTextColor</item>
     </style>
+    
+    <style name="WhiteTextColor" parent="android:style/Widget.Holo.DropDownItem.Spinner">
+    	<item name="android:textColor">#ffffff</item>
+    <!-- Here you can set the color and other text attributes -->
+	</style>
 
 </resources>
