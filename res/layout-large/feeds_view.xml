@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:baselineAligned="false">
+    <ScrollView 
+       android:layout_weight="1"
+       android:layout_width="0dp"
+       android:layout_height="fill_parent"
+       android:fillViewport="true">
+        <fragment android:name="com.example.assignment7.FeedFragment"
+        	  android:id="@+id/feed_fragment"
+        	  android:layout_width="match_parent"
+        	  android:layout_height="wrap_content"/>
+    </ScrollView>
+    
+    <ScrollView android:layout_weight="2"
+        	  	android:layout_width="0dp"
+        	  	android:layout_height="match_parent">
+        <fragment android:name="com.example.assignment7.ArticleFragment"
+        	  android:id="@+id/article_fragment"
+        	  android:layout_width="match_parent"
+        	  android:layout_height="wrap_content"/>
+    </ScrollView>
     
 
 </LinearLayout>
