@@ -3,6 +3,9 @@ package com.example.wfprssreader;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +50,12 @@ public class FeedListAdapter extends BaseAdapter {
 		
 		holder.headlineTitle.setText(list_data.get(position).getHeadlineTitle());
 		holder.headlineDate.setText(list_data.get(position).getHeadlineDate());
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.activity);
+		String feed_title_font_size_key = (String) MainActivity.activity.getResources().getText(R.string.pref_feed_title_font_size);
+		String feed_date_font_size_key = (String) MainActivity.activity.getResources().getText(R.string.pref_feed_date_font_size);
+		
+		holder.headlineTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, settings.getInt(feed_title_font_size_key, 14));
+		holder.headlineDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, settings.getInt(feed_date_font_size_key, 12));
 		
 		return convertView;
 	}

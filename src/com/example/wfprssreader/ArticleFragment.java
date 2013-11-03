@@ -1,9 +1,13 @@
 package com.example.wfprssreader;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -45,7 +49,6 @@ public class ArticleFragment extends Fragment {
 		TextView article_link = (TextView) getActivity().findViewById(R.id.article_link);
 		 
 		article.setText(MainActivity.feed.getArticles().get(position));
-		article_link.setText(MainActivity.feed.getLinks().get(position));
 		
 		current_position = position;
 		
@@ -59,6 +62,13 @@ public class ArticleFragment extends Fragment {
 					startActivity(browser_intent);
 				}
 			});
-		}	
+		}
+		String article_font_color_key = (String) getResources().getText(R.string.pref_article_font_color);
+		String article_font_size_key = (String) getResources().getText(R.string.pref_article_font_size);
+		String article_background_color_key = (String) getResources().getText(R.string.pref_article_background_color);
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.activity);
+		article.setTextColor(settings.getInt(article_font_color_key, Color.BLACK));
+		article.setTextSize(TypedValue.COMPLEX_UNIT_SP, settings.getInt(article_font_size_key, 14));
+		article.setBackgroundColor(settings.getInt(article_background_color_key, Color.WHITE));
 	}
 }

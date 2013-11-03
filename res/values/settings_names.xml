@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_article_font_size">prefArticleFontSize</string>
+    <string name="pref_article_font_color">prefArticleFontColor</string>
+    <string name="pref_article_background_color">prefArticleBackgroundColor</string>
+    <string name="pref_article_settings">Article Settings</string>
+    <string name="pref_feed_settings">Feed Settings</string>
+    <string name="pref_feed_background_color">prefBackgroundColor</string>
+    <string name="pref_feed_title_font_size">prefFeedTitleFontSize</string>
+    <string name="pref_feed_date_font_size">prefFeedDateFontSize</string>
+</resources>

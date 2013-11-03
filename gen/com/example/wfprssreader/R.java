@@ -9,9 +9,49 @@ package com.example.wfprssreader;
 
 public final class R {
     public static final class array {
-        public static final int feed_list=0x7f040000;
+        public static final int feed_list=0x7f080000;
     }
     public static final class attr {
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
+        public static final int alphaChannelText=0x7f010003;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         */
+        public static final int alphaChannelVisible=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int colorPickerBorderColor=0x7f010005;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int colorPickerSliderColor=0x7f010004;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int min=0x7f010006;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         */
+        public static final int showDialogTitle=0x7f010000;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
+         */
+        public static final int showSelectedColorInList=0x7f010001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -20,44 +60,64 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f090000;
+        public static final int activity_vertical_margin=0x7f090001;
     }
     public static final class drawable {
         public static final int ic_action_navigation_refresh=0x7f020000;
         public static final int ic_action_settings=0x7f020001;
         public static final int ic_launcher=0x7f020002;
+        public static final int icon=0x7f020003;
     }
     public static final class id {
-        public static final int action_refresh=0x7f090009;
-        public static final int action_settings=0x7f090008;
-        public static final int article=0x7f090001;
-        public static final int article_fragment=0x7f090005;
-        public static final int article_link=0x7f090000;
-        public static final int feed_fragment=0x7f090004;
-        public static final int feed_headlines_list=0x7f090002;
-        public static final int fragment_container=0x7f090003;
-        public static final int headlines_date=0x7f090007;
-        public static final int headlines_title=0x7f090006;
+        public static final int action_refresh=0x7f050011;
+        public static final int action_settings=0x7f050010;
+        public static final int article=0x7f050006;
+        public static final int article_fragment=0x7f05000b;
+        public static final int article_link=0x7f050005;
+        public static final int color_panel_new=0x7f050002;
+        public static final int color_panel_old=0x7f050001;
+        public static final int color_picker_view=0x7f050000;
+        public static final int dialog_color_picker_extra_layout_landscape=0x7f050004;
+        public static final int feed_fragment=0x7f05000a;
+        public static final int feed_headlines_list=0x7f050008;
+        public static final int fragment_container=0x7f050009;
+        public static final int headlines_date=0x7f05000d;
+        public static final int headlines_title=0x7f05000c;
+        public static final int layout1=0x7f050007;
+        public static final int number_picker=0x7f05000f;
+        public static final int preference_preview_color_panel=0x7f050003;
+        public static final int text_dialog_message=0x7f05000e;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int articles_view=0x7f030001;
+        public static final int articles_view=0x7f030000;
+        public static final int dialog_color_picker=0x7f030001;
         public static final int feed_headlines_view=0x7f030002;
         public static final int feeds_view=0x7f030003;
         public static final int headline_item_row=0x7f030004;
+        public static final int preference_number_picker_dialog=0x7f030005;
+        public static final int preference_preview_layout=0x7f030006;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
-        public static final int main_activity_actions=0x7f080001;
+        public static final int main=0x7f0a0000;
+        public static final int main_activity_actions=0x7f0a0001;
+        public static final int settings=0x7f0a0002;
     }
     public static final class string {
-        public static final int action_refresh=0x7f060004;
-        public static final int action_settings=0x7f060001;
-        public static final int action_spinner=0x7f060003;
+        public static final int action_refresh=0x7f06000b;
+        public static final int action_settings=0x7f060009;
+        public static final int action_spinner=0x7f06000a;
         public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
-        public static final int title_activity_settings=0x7f060005;
+        public static final int article_link=0x7f06000d;
+        public static final int pref_article_background_color=0x7f060003;
+        public static final int pref_article_font_color=0x7f060002;
+        public static final int pref_article_font_size=0x7f060001;
+        public static final int pref_article_settings=0x7f060004;
+        public static final int pref_feed_background_color=0x7f060006;
+        public static final int pref_feed_date_font_size=0x7f060008;
+        public static final int pref_feed_settings=0x7f060005;
+        public static final int pref_feed_title_font_size=0x7f060007;
+        public static final int title_activity_settings=0x7f06000c;
     }
     public static final class style {
         /** 
@@ -81,12 +141,155 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f070001;
         /**  Application theme. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f070002;
         /**  Here you can set the color and other text attributes 
          */
-        public static final int WhiteTextColor=0x7f070002;
+        public static final int WhiteTextColor=0x7f070003;
+        public static final int dialog_color_pciker_view_portrait=0x7f070000;
     }
+    public static final class xml {
+        public static final int settings=0x7f040000;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a ColorPickerPreference.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ColorPickerPreference_showDialogTitle com.example.wfprssreader:showDialogTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ColorPickerPreference_showSelectedColorInList com.example.wfprssreader:showSelectedColorInList}</code></td><td></td></tr>
+           </table>
+           @see #ColorPickerPreference_showDialogTitle
+           @see #ColorPickerPreference_showSelectedColorInList
+         */
+        public static final int[] ColorPickerPreference = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#showDialogTitle}
+          attribute's value can be found in the {@link #ColorPickerPreference} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
+          @attr name com.example.wfprssreader:showDialogTitle
+        */
+        public static final int ColorPickerPreference_showDialogTitle = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#showSelectedColorInList}
+          attribute's value can be found in the {@link #ColorPickerPreference} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
+          @attr name com.example.wfprssreader:showSelectedColorInList
+        */
+        public static final int ColorPickerPreference_showSelectedColorInList = 1;
+        /** Attributes that can be used with a ColorPickerView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ColorPickerView_alphaChannelText com.example.wfprssreader:alphaChannelText}</code></td><td></td></tr>
+           <tr><td><code>{@link #ColorPickerView_alphaChannelVisible com.example.wfprssreader:alphaChannelVisible}</code></td><td></td></tr>
+           <tr><td><code>{@link #ColorPickerView_colorPickerBorderColor com.example.wfprssreader:colorPickerBorderColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ColorPickerView_colorPickerSliderColor com.example.wfprssreader:colorPickerSliderColor}</code></td><td></td></tr>
+           </table>
+           @see #ColorPickerView_alphaChannelText
+           @see #ColorPickerView_alphaChannelVisible
+           @see #ColorPickerView_colorPickerBorderColor
+           @see #ColorPickerView_colorPickerSliderColor
+         */
+        public static final int[] ColorPickerView = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#alphaChannelText}
+          attribute's value can be found in the {@link #ColorPickerView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name com.example.wfprssreader:alphaChannelText
+        */
+        public static final int ColorPickerView_alphaChannelText = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#alphaChannelVisible}
+          attribute's value can be found in the {@link #ColorPickerView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
+          @attr name com.example.wfprssreader:alphaChannelVisible
+        */
+        public static final int ColorPickerView_alphaChannelVisible = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#colorPickerBorderColor}
+          attribute's value can be found in the {@link #ColorPickerView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.example.wfprssreader:colorPickerBorderColor
+        */
+        public static final int ColorPickerView_colorPickerBorderColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#colorPickerSliderColor}
+          attribute's value can be found in the {@link #ColorPickerView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.example.wfprssreader:colorPickerSliderColor
+        */
+        public static final int ColorPickerView_colorPickerSliderColor = 2;
+        /**  note: to re-use an existing Android attribute not already used by the superclass, name should have prefix "android:" and do not define a format 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #NumberPickerDialogPreference_android_max android:max}</code></td><td></td></tr>
+           <tr><td><code>{@link #NumberPickerDialogPreference_min com.example.wfprssreader:min}</code></td><td></td></tr>
+           </table>
+           @see #NumberPickerDialogPreference_android_max
+           @see #NumberPickerDialogPreference_min
+         */
+        public static final int[] NumberPickerDialogPreference = {
+            0x01010136, 0x7f010006
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#max}
+          attribute's value can be found in the {@link #NumberPickerDialogPreference} array.
+          @attr name android:max
+        */
+        public static final int NumberPickerDialogPreference_android_max = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.wfprssreader.R.attr#min}
+          attribute's value can be found in the {@link #NumberPickerDialogPreference} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.wfprssreader:min
+        */
+        public static final int NumberPickerDialogPreference_min = 1;
+    };
 }

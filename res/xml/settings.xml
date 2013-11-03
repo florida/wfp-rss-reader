@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/pref_article_settings">
+	    <com.example.wfprssreader.NumberPickerDialogPreference
+		      	android:key="@string/pref_article_font_size"
+		        android:defaultValue="14"
+		        android:dialogMessage="Select Article Font Size"
+		        android:max="50"
+		        android:title="Set Article Font Size"
+		        android:summary="Change article font size"
+		        custom:min="10" />
+	    
+	    <afzkl.development.colorpickerview.preference.ColorPickerPreference
+	            android:defaultValue="0xFF000000"
+	            android:key="@string/pref_article_font_color"
+	            android:summary="Change article font color"
+	            android:title="Set Article Font Color" />
+	    
+	    <afzkl.development.colorpickerview.preference.ColorPickerPreference
+	            android:defaultValue="0xFF000000"
+	            android:key="@string/pref_article_background_color"
+	            android:summary="Change article background color"
+	            android:title="Set Article Background Color" />
+	</PreferenceCategory>
+	
+    <PreferenceCategory android:title="@string/pref_feed_settings">
+    	<afzkl.development.colorpickerview.preference.ColorPickerPreference
+	            android:defaultValue="0xFF000000"
+	            android:key="@string/pref_feed_background_color"
+	            android:summary="Change feed background color"
+	            android:title="Set Feed Background Color" />
+    	
+    	<com.example.wfprssreader.NumberPickerDialogPreference
+		      	android:key="@string/pref_feed_title_font_size"
+		        android:defaultValue="14"
+		        android:dialogMessage="Select Font Size"
+		        android:max="50"
+		        android:title="Set Feed Title Font Size"
+		        android:summary="Change Feed Title Font size"
+		        custom:min="10" />
+    	
+    	<com.example.wfprssreader.NumberPickerDialogPreference
+		      	android:key="@string/pref_feed_date_font_size"
+		        android:defaultValue="12"
+		        android:dialogMessage="Select Font Size"
+		        android:max="50"
+		        android:title="Set Feed Date Font Size"
+		        android:summary="Change Feed Date Font size"
+		        custom:min="10" />
+    </PreferenceCategory>
+</PreferenceScreen>

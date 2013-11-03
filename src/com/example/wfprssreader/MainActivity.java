@@ -2,6 +2,7 @@ package com.example.wfprssreader;
 
 import android.app.ActionBar;
 import android.app.ActionBar.OnNavigationListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -17,7 +18,7 @@ public class MainActivity extends FragmentActivity implements FeedFragment.OnFee
 	Feed feed_sports = null, feed_local = null, feed_world = null;
 	public static FragmentActivity activity;
 	private FeedFragment feed_fragment;
-	int REQUEST_CODE_STANDARD = 1;
+	int REQUEST_CODE_SETTINGS = 1;
 	
 
 	@Override
@@ -99,7 +100,8 @@ public class MainActivity extends FragmentActivity implements FeedFragment.OnFee
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_settings:
-			
+			Intent intent = new Intent(this, SettingsActivity.class);
+			startActivityForResult(intent, REQUEST_CODE_SETTINGS);
 			break;
 		case R.id.action_refresh:
 			feed.refreshFeed();
@@ -108,5 +110,17 @@ public class MainActivity extends FragmentActivity implements FeedFragment.OnFee
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		
+		if (requestCode == REQUEST_CODE_SETTINGS) {
+			feed_fragment.changeFeedPreference();
+			feed.refreshFeed();
+		}
+	}
+	
+	
 
 }

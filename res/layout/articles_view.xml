@@ -7,8 +7,9 @@
     <TextView android:id="@+id/article_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/article_link"
         android:padding="16dp"
-        android:textSize="15sp"/>
+        android:textSize="20sp"/>
     
     <TextView android:id="@+id/article"
     	  android:layout_width="match_parent"
