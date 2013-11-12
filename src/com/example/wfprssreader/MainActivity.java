@@ -116,11 +116,11 @@ public class MainActivity extends FragmentActivity implements FeedFragment.OnFee
 		super.onActivityResult(requestCode, resultCode, data);
 		
 		if (requestCode == REQUEST_CODE_SETTINGS) {
-			feed_fragment.changeFeedPreference();
-			feed.refreshFeed();
+			
+			if (feed_fragment.isVisible()) {
+				feed_fragment.changeFeedPreference();
+				feed.refreshFeed();
+			}
 		}
 	}
-	
-	
-
 }
